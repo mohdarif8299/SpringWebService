@@ -145,7 +145,11 @@ public class BooksController {
 				description, category, price, username, date);
 		return bookRepository.save(b);
 	}
-
+@GetMapping("/") 
+@ResponseBody 
+public String helloWorld() {
+	return "SpringBOot On Server";
+}
 	@GetMapping("/alluploadedbooks")
 	@ResponseBody
 	private List<BookUploadModel> allBooksUploaded() {
